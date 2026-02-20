@@ -1,7 +1,7 @@
 # Telegram Bot Konfigürasyonu
 
 # Bot Token - BotFather'dan alınacak
-BOT_TOKEN = "BURAYA_BOT_TOKEN_GİRİN"
+BOT_TOKEN = "8598752603:AAGXwCDR1xHr6sskJDH_LSeOdIV9CCuNqxQ"
 
 # API Ayarları
 PRAYER_TIMES_API = "https://api.aladhan.com/v1/timingsByCity"
