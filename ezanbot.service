@@ -1,0 +1,41 @@
+[Unit]
+Description=Ezan Vakitleri Telegram Bot
+After=network.target
+
+[Service]
+Type=simple
+User=USER_BURAYA
+WorkingDirectory=/home/USER_BURAYA/ezan_bot
+ExecStart=/usr/bin/python3 /home/USER_BURAYA/ezan_bot/main.py
+Restart=always
+RestartSec=10
+
+# Güvenlik ayarları
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
+
+# KULLANIM TALİMATLARI:
+# 
+# 1. Bu dosyadaki USER_BURAYA kısımlarını kendi kullanıcı adınızla değiştirin
+# 2. Dosyayı /etc/systemd/system/ezanbot.service olarak kaydedin:
+#    sudo cp ezanbot.service /etc/systemd/system/
+#
+# 3. Servisi etkinleştirin ve başlatın:
+#    sudo systemctl daemon-reload
+#    sudo systemctl enable ezanbot
+#    sudo systemctl start ezanbot
+#
+# 4. Durumu kontrol edin:
+#    sudo systemctl status ezanbot
+#
+# 5. Logları görüntüleyin:
+#    sudo journalctl -u ezanbot -f
+#
+# 6. Servisi durdurmak için:
+#    sudo systemctl stop ezanbot
+#
+# 7. Servisi yeniden başlatmak için:
+#    sudo systemctl restart ezanbot
